@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>赛道场景检查</title>
+<style>body{margin:0;background:#172c3c;color:white;font:14px system-ui}canvas{position:fixed;inset:0;width:100%;height:100%}aside{position:fixed;left:16px;top:16px;max-width:530px;padding:14px;background:#102a42e8;border:1px solid #81ccdf;border-radius:8px}button,select{padding:8px;margin:4px;color:#173b50;background:#e1f7f7;border:0;border-radius:4px}input{width:100%}p{margin:7px 0;font-size:12px;color:#bedfeb}label{margin-right:12px}label input{width:auto}output{display:block;margin-top:6px;font-size:12px}</style>
+<canvas id="scene" aria-label="真实赛道渲染"></canvas><aside><b>赛道场景检查</b><select id="track" aria-label="检查赛道"></select><div id="stations"></div><input id="progress" aria-label="赛道进度" type="range" min="0" max="1000" value="0"><label><input type="checkbox" id="overview">俯瞰</label><label><input type="checkbox" id="drift">护栏附近横摆</label><p>复用正式游戏的场景、车辆与相机；不写入游戏进度。</p><output id="stats">准备中</output></aside>
+<script type="module">
+import {TRACKS} from '../dist/tracks.js';
+import {createWorld} from '../dist/world.js';
+const world=createWorld(document.querySelector('#scene')),select=document.querySelector('#track'),range=document.querySelector('#progress'),overview=document.querySelector('#overview'),drift=document.querySelector('#drift'),stats=document.querySelector('#stats');
+select.innerHTML=TRACKS.map(t=>`<option value="${t.id}">${t.name}</option>`).join('');select.value='glacier';
+document.querySelector('#stations').innerHTML=[0,25,50,75].map(n=>`<button data-station="${n}">${n===0?'起点':n+'%'}</button>`).join('');
+document.querySelectorAll('[data-station]').forEach(b=>b.onclick=()=>range.value=+b.dataset.station*10);
+function frame(now){
+ try{world.setTrack(select.value);const progress=+range.value/1000*world.trackLength,p=world.sample(progress);
+ world.update({mode:'race',trackId:select.value,progress,lane:drift.checked?8.8:0,heading:p.angle+(drift.checked?.6:0),travelHeading:p.angle+(drift.checked?.6:0),speed:0,time:now/1000,quality:'high'});
+ if(overview.checked){world.camera.position.set(p.position.x+95,p.position.y+200,p.position.z-145);world.camera.lookAt(p.position);world.renderer.render(world.scene,world.camera);}
+ stats.textContent=`${select.selectedOptions[0].text} · ${(progress/1000).toFixed(2)} / ${(world.trackLength/1000).toFixed(2)} km · 海拔 ${p.position.y.toFixed(1)} m · ${world.renderer.info.render.calls} draws`;
+ }catch(e){stats.textContent='ERROR: '+e.message;console.error(e);return;}requestAnimationFrame(frame);
+}requestAnimationFrame(frame);
+</script></html>

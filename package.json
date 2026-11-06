@@ -1,0 +1,12 @@
+{
+  "name": "velocity-rush",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 scripts/serve.py",
+    "check": "node --check dist/game.js && node --check dist/world.js && node --check dist/tracks.js && node --check dist/scenery.js && node --check dist/challenge-scenery.js && node --check dist/car-model.js && node --check dist/audio.js && node --check dist/classic-music.js && node --check dist/physics.js && node --check dist/expedition-tracks.js && node --check dist/expedition-scenery.js && node --check dist/track-environments.js && node --check dist/driving-guide.js && node --check dist/driving-input.js && node --check dist/player-settings.js",
+    "test": "node tests/physics.test.mjs && node tests/tracks.test.mjs && node tests/controls-settings.test.mjs && node tests/driving-guide.test.mjs && node tests/audio.test.mjs",
+    "previews": "node scripts/build-track-previews.mjs"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="900" viewBox="0 0 480 900" role="img" aria-label="原创凌光车手">
+<defs><linearGradient id="suit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a4e7f1"/><stop offset=".5" stop-color="#2e6f93"/><stop offset="1" stop-color="#132c4b"/></linearGradient><linearGradient id="visor"><stop stop-color="#111f39"/><stop offset=".55" stop-color="#235f7b"/><stop offset="1" stop-color="#9affee"/></linearGradient></defs>
+<ellipse cx="236" cy="871" rx="123" ry="15" fill="#152b45" opacity=".25"/>
+<path d="M175 481 170 686 155 826 210 835 247 638 275 833 331 820 302 661 295 480Z" fill="url(#suit)" stroke="#0e2945" stroke-width="5"/>
+<path d="m172 823-30 24-3 30h72l3-44zm107 4-8 42h76l-6-27-20-23" fill="#14293d" stroke="#588aab" stroke-width="4"/>
+<path d="m170 271-46 22-31 127-17 118 44 15 26-114 33-54zm128-2 42 24 36 127 21 112-43 18-32-119-34-51" fill="url(#suit)" stroke="#163655" stroke-width="5"/>
+<path d="m77 529-8 38 15 19 29-9 8-31zm278 4 0 39 25 14 22-21-8-38" fill="#152c46" stroke="#6dc9d4" stroke-width="4"/>
+<path d="M172 267 213 251h45l44 19 27 163-30 87-126-1-29-87Z" fill="url(#suit)" stroke="#183c58" stroke-width="5"/>
+<path d="M154 343 205 325h61l46 18-9 45-37-12h-61l-40 13Z" fill="#162e49"/><path d="m173 360 39-11h49l34 12" fill="none" stroke="#bcffdd" stroke-width="8"/>
+<path d="M237 281v219" stroke="#a2d8e9" stroke-width="4"/><path d="M173 485h128" stroke="#172d48" stroke-width="22"/>
+<path d="m184 595 28 3-16 115-28-6zm82 0 27-3 25 109-28 7" fill="#152e47"/>
+<rect x="205" y="232" width="59" height="38" rx="12" fill="#10283b"/>
+<path d="M165 160q1-84 73-86 72 3 74 85l-16 62q-18 28-59 32-45-5-62-34Z" fill="#b8edf0" stroke="#1e4c70" stroke-width="6"/>
+<path d="M171 150q67-33 134 0l-9 48q-61 25-117-1Z" fill="url(#visor)" stroke="#122f4e" stroke-width="7"/>
+<path d="m183 158 97-1" stroke="#c9fffd" stroke-width="4" opacity=".8"/><path d="M208 85h55l-9 36h-39Z" fill="#234f73"/>
+<path d="m195 219 15 13h54l15-13" fill="none" stroke="#2a607a" stroke-width="8"/><path d="M226 393h24l-17 26h18l-29 35 7-26h-17Z" fill="#c4ffbd"/>
+</svg>

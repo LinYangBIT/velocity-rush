@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="280" viewBox="0 0 520 280" role="img" aria-label="原创凌光赛车">
+<defs><linearGradient id="body" x2="0" y2="1"><stop stop-color="#8bdfec"/><stop offset="1" stop-color="#28638c"/></linearGradient><linearGradient id="glass" x2="1" y2="1"><stop stop-color="#183048"/><stop offset="1" stop-color="#5dcee0"/></linearGradient></defs>
+<rect width="520" height="280" fill="#17334b"/><path d="M20 228h480M20 241h480" stroke="#649daa" opacity=".3"/>
+<ellipse cx="264" cy="224" rx="205" ry="13" fill="#0b1a30"/>
+<path d="m54 175 77-22 54-51 145-1 66 46 78 23 11 34-41 15H92l-40-18Z" fill="url(#body)" stroke="#b5e9ed" stroke-width="3"/>
+<path d="m150 148 46-37h125l51 37Z" fill="url(#glass)" stroke="#8acedc" stroke-width="3"/><path d="M265 112v36" stroke="#a0d9e1" stroke-width="5"/>
+<path d="M74 197h378l13-11-385-3Z" fill="#193449"/><path d="m395 153 69 18-2 10-62-11Z" fill="#d6fff4"/>
+<path d="m64 169 30-8 2 12-33 8Z" fill="#fb617e"/><path d="M72 145h78v8H72zm18 7v14m45-14v9" fill="#448fa9" stroke="#b8edf0" stroke-width="4"/>
+<g fill="#0e1d2c" stroke="#27485c" stroke-width="5"><circle cx="142" cy="202" r="34"/><circle cx="389" cy="202" r="34"/></g><g fill="#9ac9d8" stroke="#35576a" stroke-width="5"><circle cx="142" cy="202" r="21"/><circle cx="389" cy="202" r="21"/></g>
+<path d="M141 185v34m-16-17h34m230-17v34m-17-17h34" stroke="#28465e" stroke-width="6"/><text x="30" y="42" fill="#b8ffdd" font-family="Arial,sans-serif" font-size="22" letter-spacing="4">LUMEN / VELOCITY RUSH</text>
+</svg>
